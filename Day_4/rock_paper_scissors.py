@@ -1,10 +1,13 @@
-#TODO
-# Add a point tracker
 
 import random
 hand = ["Rock", "Paper", "Scissors"]
 
 def main():
+    
+    Games = 0
+    Wins = 0
+    Lose = 0
+    
     while True:
         player_hand = int(input("What do you choose?\n"
                                 "1: for Rock\n"
@@ -38,29 +41,38 @@ def main():
                 print("It Is A Draw")
             elif player_hand == 2:
                 print("You Win!") 
+                Wins += 1
             elif player_hand == 3:
-                print("You lose!")       
+                print("You lose!")      
+                Lose += 1
             
             
         # Paper (2)
         elif cpu_hand == 'Paper':
             if player_hand == 1:
                 print("You Lose!")
+                Lose += 1
             elif player_hand == 2:
                 print("It Is A Draw") 
             elif player_hand == 3:
-                print("You Win!")   
+                print("You Win!")
+                Wins += 1  
                 
         # Scissors (3)   
         elif cpu_hand == 'Scissors':    
             if player_hand == 1:
                 print("You Lose!")
+                Lose += 1
             elif player_hand == 2:
                 print("You Win!") 
+                Wins += 1
             elif player_hand == 3:
                 print("It Is A Draw")     
-    
-        print()
+
+        Games += 1
+        print(f"You Have Played {Games} Games")
+        print(f"You Have Won {Wins} Times, And Lost {Lose} Times.")
+        
     
 if __name__ == "__main__":
     main()

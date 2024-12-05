@@ -14,7 +14,7 @@ def main():
     nr_symbols = int(input(f"How many symbols would you like?\n"))
     nr_numbers = int(input(f"How many numbers would you like?\n"))
 
-#Eazy Level - Order not randomised:
+#Eazy Level - Order not randomised: (COMMENT OUT HARD MODE TO USE)
     # #?LETTERS
     # password = ""
     # for char in range(1 , nr_letters +1):

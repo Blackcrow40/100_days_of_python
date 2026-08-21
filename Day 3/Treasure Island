@@ -1,1 +1,160 @@
+def main():
 
+    print("Welcome to Treasure Island!")
+
+    first = input(
+        "You find yourself at a crossroads. The path splits off left and right. "
+        "Which way do you want to go? "
+    ).lower()
+
+    # HOME ENDING
+    if first == "home":
+        print("\nYou turn around and leave the island.")
+        print("You return home, where your loving spouse is waiting for you.")
+        print("As you sit together, surrounded by friends, family, love and joy,")
+        print("you realise that the true treasure was never on the island.")
+        print("The real treasure was the life you had waiting for you at home.")
+        print("\nTHE END")
+        return
+
+    # LEFT PATH
+    if first == "left":
+        print("\nYou go left.")
+        print("The path winds up the cliff, giving you a view of the island.")
+
+        left_1 = input(
+            "You can go right and try to find a path down the cliff, "
+            "or you can try to climb down the cliff immediately. "
+            "Which do you choose? "
+        ).lower()
+
+        if left_1 == "home":
+            print("\nYou decide you've had enough of this.")
+            print("You turn around, leave the island and go home.")
+            print("There, you find your loving spouse waiting for you.")
+            print("You realise that the true treasure was never on the island.")
+            print("It was the love, friendship and happiness waiting for you at home.")
+            print("\nTHE END")
+            return
+
+        if left_1 == "right":
+            print("\nYou follow the path to the right.")
+            print("After a while, you find a path leading safely down the cliff.")
+            print("You continue deeper into the island...")
+            
+        elif left_1 == "climb down":
+            print("\nYou try to climb down the cliff.")
+            print("The rocks are slippery and loose.")
+            print("You lose your footing and tumble down the cliff,")
+            print("your body slamming into the rocks below.")
+            print("\nYOU HAVE DIED")
+            return
+
+        else:
+            print("\nYou stand there for a moment, unsure what to do.")
+            print("Unfortunately, you waste so much time deciding that night falls.")
+            print("You decide to turn around and go home.")
+            return
+
+    # RIGHT PATH
+    elif first == "right":
+        print("\nYou take the right path.")
+        print("It takes you deeper into the island.")
+
+    else:
+        print("\nYou don't recognise that direction.")
+        print("You decide to turn around and go home.")
+        return
+
+    # HOUSE
+    print("\nAfter a lot of walking, you find a strange house.")
+    print("The house has three doors.")
+    print("One is red, one is blue, and one is gold.")
+
+    while True:
+        door = input(
+            "\nWhich door do you want to investigate? "
+            "(red / blue / gold / home) "
+        ).lower()
+
+        if door == "home":
+            print("\nYou decide the treasure isn't worth the risk.")
+            print("You turn around and leave the island.")
+            print("When you get home, your loving spouse welcomes you.")
+            print("Surrounded by love, friends and happiness, you realise something.")
+            print("The true treasure was never on the island.")
+            print("It was here all along.")
+            print("\nTHE END")
+            return
+
+        # RED DOOR
+        elif door == "red":
+            print("\nYou approach the red door.")
+            print("The door knob feels strangely warm.")
+
+            choice = input(
+                "Are you sure you want to open the red door? "
+                "(yes / no) "
+            ).lower()
+
+            if choice == "yes":
+                print("\nYou open the door.")
+                print("A massive burst of fire shoots out!")
+                print("You are cooked instantly.")
+                print("\nYOU HAVE DIED")
+                return
+
+            else:
+                print("\nYou decide not to risk it.")
+                print("You step away from the red door.")
+
+        # BLUE DOOR
+        elif door == "blue":
+            print("\nYou approach the blue door.")
+            print("The door knob is freezing cold.")
+
+            choice = input(
+                "Are you sure you want to open the blue door? "
+                "(yes / no) "
+            ).lower()
+
+            if choice == "yes":
+                print("\nYou open the door.")
+                print("A wall of icy air shoots out!")
+                print("You are frozen solid instantly.")
+                print("\nYOU HAVE DIED")
+                return
+
+            else:
+                print("\nYou decide not to risk it.")
+                print("You step away from the blue door.")
+
+        # GOLD DOOR
+        elif door == "gold":
+            print("\nYou approach the gold door.")
+            print("You hear a soft clinking sound coming from behind it.")
+
+            choice = input(
+                "Are you sure you want to open the gold door? "
+                "(yes / no) "
+            ).lower()
+
+            if choice == "yes":
+                print("\nYou open the door...")
+                print("Inside is a room piled high with gold, gems and jewels.")
+                print("YOU HAVE FOUND THE TREASURE OF THE ISLAND!")
+                print("As you look around, the door behind you suddenly slams shut.")
+                print("\nTHE END??")
+                return
+
+            else:
+                print("\nYou decide not to risk it.")
+                print("You step away from the gold door.")
+
+        else:
+            print("\nThat isn't one of the doors.")
+            print("You can choose red, blue, gold, or home.")
+
+            
+if __name__ == "__main__":
+    main()
